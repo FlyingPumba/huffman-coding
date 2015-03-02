@@ -3,7 +3,7 @@ from heapq import *
 __author__ = 'flyingpumba'
 
 parser = argparse.ArgumentParser(description='Example of compression using Huffman coding')
-parser.add_argument('-d','--debug',help='Debug mode will output some useful Debug mode will output some useful information.', required=False, action="store_true")
+parser.add_argument('-d','--debug',help='Debug mode will output some useful information.', required=False, action="store_true")
 parser.add_argument('-i','--input', help='Input file name',required=True)
 parser.add_argument('-o','--output',help='Output file name', required=True)
 args = parser.parse_args()
