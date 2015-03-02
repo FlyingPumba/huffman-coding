@@ -90,14 +90,16 @@ while 1:
 	if not char:
 		break
 	else:
-		out.write('%s ' % findCode(huffmantree, char))
+		out.write('%s' % findCode(huffmantree, char))
 
 file.close()
 out.close()
 
 ## write debug file with the codes for each char
 if debug:
-	debug_file = open('char-codes.txt', 'w+')
+	debug_file = open('debug-info.txt', 'w+')
+	debug_file.write('Huffman Tree:\n%s\n' % (huffmantree,))
+	debug_file.write('\nChar codes:\n')
 	for x in h:
 		debug_file.write('%s: %s\n' % (chr(x[1]), findCode(huffmantree, chr(x[1]))))
 	debug_file.close()
